@@ -18,12 +18,12 @@
         <property name="cleanSession" value="true"></property>
         <property name="connectionTimeout" value="30"></property>
         <property name="keepAliveInterval" value="45"></property>
-        <property name="userName" value="user1"></property>
-        <property name="password" value="123456"></property>
+        <property name="userName" value="admin"></property>
+        <property name="password" value="password"></property>
     </bean>
 
     <bean id="client" class="org.eclipse.paho.client.mqttv3.MqttClient">
-        <constructor-arg name="serverURI" value="tcp://127.0.0.1:1883"></constructor-arg>
+        <constructor-arg name="serverURI" value="tcp://127.0.0.1:61613"></constructor-arg>
         <constructor-arg name="clientId" value="clientId_consumer"></constructor-arg>
         <property name="callback" ref="mqttCallback"></property>
     </bean>

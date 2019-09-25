@@ -13,11 +13,11 @@
 
     <bean id="clientFactory"
           class="org.springframework.integration.mqtt.core.DefaultMqttPahoClientFactory">
-        <property name="userName" value="user1"/>
-        <property name="password" value="123456"/>
+        <property name="userName" value="admin"/>
+        <property name="password" value="password"/>
         <property name="serverURIs">
             <array>
-                <value>tcp://127.0.0.1:1883</value>
+                <value>tcp://127.0.0.1:61613</value>
             </array>
         </property>
     </bean>

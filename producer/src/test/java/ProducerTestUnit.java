@@ -1,5 +1,3 @@
-package com.ylw;
-
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +17,7 @@ public class ProducerTestUnit {
 
     @Test
     public void sendTextQueue() {
-        sendMqttMsg("testTopic", 2, "hello world send...");
+        sendMqttMsg("testTopic", 2, "send Time -> " + System.currentTimeMillis()+"\n ------------------");
 
     }
 
@@ -34,7 +32,10 @@ public class ProducerTestUnit {
         Message<String> messages = MessageBuilder.withPayload(message).setHeader(MqttHeaders.TOPIC, topicName)
                 .setHeader(MqttHeaders.QOS, qos)
                 .setHeader(MqttHeaders.RETAINED, true).build();
-
-        mqtt.handleMessage(messages);
+        try {
+            mqtt.handleMessage(messages);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
