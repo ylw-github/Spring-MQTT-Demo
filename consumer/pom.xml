@@ -11,16 +11,21 @@
 
     <artifactId>consumer</artifactId>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-core -->
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-core</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>4.3.6.RELEASE</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-mqtt -->
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-mqtt</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>4.3.0.RELEASE</version>
         </dependency>
+
+
         <dependency>
             <groupId>org.eclipse.paho</groupId>
             <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
